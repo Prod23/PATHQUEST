@@ -1,2 +1,2 @@
 # PATHQUEST
-Path visualizer
+Path visualizer web application
