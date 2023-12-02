@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+### I.Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+PathQuest:Advanced PathfindingVisualizerisaninteractivewebapplication
+that allows usersto explore and visualize popular pathfindingalgorithms in
+action.Theprojectaimstoprovideahands-onexperienceforunderstandingthe
+principles behind algorithms such as Dijkstra's Algorithm, A* Search
+Algorithm, Breadth-First Search (BFS) etc. The visualizer offers real-time
+animationsandinteractivecontrols,makingitavaluabletoolforbothlearning
+andexperimentation.
+```
+```
+InPathQuest,userscancreateagrid-basedmapandsetstartandendpointsby
+simplydragging anddropping nodes.Additionally,theyhavetheflexibilityto
+place custom walls to create unique maze-like structures. The user-friendly
+interfaceensuresaseamlessexperienceforinteractingwiththeapplicationand
+observingthealgorithmsatwork.
+```
+```
+Theprojectshowcasesarangeoffeatures,includingdynamicvisualizationsthat
+illustratehowpathfindingalgorithmsexploreanddiscovertheshortestpathin
+realtime.Theanimationsprovideastep-by-stepbreakdownofthealgorithms'
+process,allowinguserstograsptheirefficiencyandbehavior.
+```
+FINALPROJECTREPORT
 
-## Available Scripts
 
-In the project directory, you can run:
+### II.Functionalities
 
-### `npm start`
+#### 1.VisualizingDijkstra'sAlgorithm:Theappfeaturesa"VisualizeDijkstra's
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+Algorithm" button that initiatesthe visualization process. Whenclicked,the
+algorithmvisuallyexploresthegridtofindtheshortestpathfromtheselected
+startnodetotheendnode.
+```
+#### 2.SelectingStartandEndNodes:Userscaneasilychoosethestartandend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+nodesanywhereonthegridbyclickingontherespectivecells.Theselectednodes
+arevisuallymarkedtoindicatetheirrole.
+```
+#### 3.CreatingWallsandMazes:Usershavetheflexibilitytodesigncustomwalls
 
-### `npm test`
+```
+ormazesbyclickingongridcells,effectivelyblockingthepathofthealgorithm.
+ThisfeatureenhancestheunderstandingofhowDijkstra'salgorithmnavigates
+aroundobstacles.
+```
+#### 4. Animated Search Process: The app employs captivating animations to
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+showcasethealgorithm'ssearchprocess.Asthealgorithmexploresthegrid,it
+visuallydemonstrateshowitsearchesfortheoptimalpathstepbystep.
+```
+5. Shortest PathAnimation:Aftersuccessfully findingtheendnode,theapp
+showcasesanotheranimation, clearlymappingouttheshortestpathfromthe
+starttotheendnode.Thisanimationvividlyillustratesthepathtraversedbythe
+algorithm.
 
-### `npm run build`
+```
+ThePathfinderappprovidesanintuitiveandengagingwayforuserstograsp
+theprinciplesofDijkstra'salgorithmanditsapplicationsinfindingtheshortest
+pathonagrid-basedenvironment.Thecombinationofinteractivefeaturesand
+captivatinganimationsmakesitavaluabletoolforlearningandunderstanding
+pathfindingalgorithms.
+```
+FINALPROJECTREPORT
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### III.Implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+TheimplementationofthePathfinderapputilizesReactandbasicHTML/CSS
+tocreateaninteractiveandvisuallyappealingplatformforexploringDijkstra's
+algorithm.
+```
+```
+1.PathFindingVisualizerFolder:
+```
+- pfv.jsx(PathFindingVisualizer):Thiskeyfilecontainsthemain
+implementationoftheapplication.Itcreatesthegrid,initializesallthenodes,
+andhandlesthefunctionalities.ItdefinesthevisualizationofDijkstra's
+algorithmandtheanimationsforsearchingtheshortestpath.
+- pfv.css:ThisCSSfileisresponsibleforstylingthegrid,buttons,andnavbar.
+Itensuresacleanandvisuallypleasinginterfaceforaseamlessuserexperience.
 
-### `npm run eject`
+```
+2.NodeFolder:
+```
+- Node.jsx:ThisfiledefinestheNodecomponent,representingeachcellonthe
+grid.Ithandlesthepropertiesandstatesofeachnode,suchaswhetherit'sthe
+startnode,endnode,orawall.Node.jsxplaysacrucialroleinvisualizingthe
+algorithm'spathfindingprocess.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+3.AlgorithmsFolder:
+```
+- dijkstra.js:Thedijkstra.jsfilecontainstheimplementationoftheDijkstra's
+algorithm.Itcalculatestheshortestpathonthegrid,consideringstartandend
+nodes,whileavoidingobstaclesrepresentedaswalls.Thealgorithm'scorelogic
+liesinthisfile.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+ThePathfinderapp'ssignificanceliesinitsinteractivenature,whichallowsusers
+toactivelyparticipateintheexplorationofDijkstra'salgorithm.Theanimations
+providedbypfv.cssandNode.cssenhanceuserunderstandingbyvisually
+illustratingthesearchprocessandtheshortestpath'sdiscovery.Theclear
+separationofcomponentsintodifferentfilesfacilitateseasymaintenanceand
+scalabilityoftheproject.Theimplementationthusprovidesauser-friendlyand
+educationalplatformtocomprehendtheintricaciesofDijkstra'salgorithmand
+itsapplicationsinpathfinding.
+```
+FINALPROJECTREPORT
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### IV.Snapshots:
 
-## Learn More
+```
+BelowaresomesnapshotsofthePathfinderwebapplication:
+```
+```
+1.HomePage:
+```
+FINALPROJECTREPORT
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+2.StartandEndNodeSelected:
+```
+```
+3.MazeCreation:
+```
+FINALPROJECTREPORT
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+4.ShortestPathVisualization:
+```
+FINALPROJECTREPORT
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+FINALPROJECTREPORT
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+5.ShortestPath:
+```
+FINALPROJECTREPORT
