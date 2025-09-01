@@ -1,0 +1,32 @@
+.pathfinding-visualizer {
+  @apply flex flex-col min-h-screen bg-gray-100;
+}
+
+.grid-message {
+  @apply text-center py-2 px-4 mx-auto my-2 rounded-md font-semibold;
+  max-width: 400px;
+}
+
+.message-start {
+  @apply bg-green-100 text-green-800;
+}
+
+.message-finish {
+  @apply bg-red-100 text-red-800;
+}
+
+.message-done {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.vibrate-animation {
+  animation: vibrate 0.3s linear;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}

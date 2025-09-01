@@ -1,0 +1,119 @@
+.grid{
+    margin: 20px 0 0;
+    
+}
+.background{
+    background-color: rgb(90, 89, 89)
+}
+.nodes{
+    background-color:  rgb(42, 47, 66);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messageStart{
+    color: rgb(4, 202, 4);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 25px;
+}
+.messageFinish{
+    color: rgb(247, 61, 61);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.vibrate-animation {
+    animation-name: vibrate;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-4px); }
+    100% { transform: translateX(4px); }
+}
+  
+.messageDone{
+    color: rgb(34, 34, 193);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.navbar{
+    background-color: rgb(42, 47, 66);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2)
+}
+.nav-brand{
+    display: flex;
+    align-items: center;
+    color: rgb(244, 107, 9);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Caveat', cursive; */
+    font-weight: bolder;
+}
+.logo{
+    margin-left: 15px;
+    cursor: pointer;
+}
+/* .nav-menu button{
+    position: relative;
+    color: black;
+    cursor: pointer;
+} */
+.nav-menu{
+    margin-left: 20px;
+    align-items: center;
+    display: block;
+    color: rgb(244, 25, 9);
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 12px;
+
+}
+.dropdown-content{
+    margin-top: 10px;
+    display: inline-block;
+    position: center;
+    background-color: rgb(230, 226, 173);
+    min-width: 160px;
+    box-shadow:0px 8px 16px 0px rgba(0.2,0.2,0.2,0.2);
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.nav-menu:hover .dropdown-content{
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+}
+/* .dropdown-content {
+    top: calc(100% + 10px);
+    left: 50%; 
+    transform: translateX(-50%);
+} */
+button{
+    /* display: block;
+    align-items: center; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    background-color:transparent;
+    color: rgb(255, 98, 0);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:rgb(128, 58, 0);
+}

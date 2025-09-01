@@ -1,0 +1,37 @@
+.grid-container {
+  @apply p-4 flex flex-col items-center justify-center;
+  margin-top: 20px;
+}
+
+.grid-row {
+  @apply flex flex-row;
+}
+
+.grid-message {
+  @apply text-xl font-bold mb-4 p-2 rounded-md;
+  transition: all 0.3s ease;
+}
+
+.message-start {
+  @apply bg-green-100 text-green-800;
+}
+
+.message-finish {
+  @apply bg-red-100 text-red-800;
+}
+
+.message-done {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.vibrate-animation {
+  animation: vibrate 0.3s linear;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
